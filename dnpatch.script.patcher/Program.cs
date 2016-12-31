@@ -10,6 +10,9 @@ namespace dnpatch.script.patcher
     {
         static void Main(string[] args)
         {
+            Script script = new Script("patcher.json");
+            script.Patch();
+            Console.Read();
         }
     }
 }
