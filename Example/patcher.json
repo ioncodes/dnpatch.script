@@ -1,0 +1,16 @@
+{
+    "target":"Example.exe",
+    "save":"Example.Scripted.exe",
+    "targets":[{
+        "ns":"Example",
+        "cl":"Program",
+        "me":"Print",
+        "ac":"empty"
+    },{
+        "ns":"Example",
+        "cl":"Program",
+        "me":"Main",
+        "ac":"remove",
+        "indices":[2,3,4,5]
+    }]
+}
