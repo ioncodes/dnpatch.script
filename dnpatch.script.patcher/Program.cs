@@ -12,6 +12,7 @@ namespace dnpatch.script.patcher
         {
             Script script = new Script("patcher.json");
             script.Patch();
+
             Console.Read();
         }
     }
