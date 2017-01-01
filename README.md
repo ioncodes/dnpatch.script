@@ -8,27 +8,27 @@ Create a file called "patcher.json" in the patcher directory. Here is a small ex
     "target":"Example.exe",
     "save":"Example.Scripted.exe",
     "targets":[{
-        "ns":"Example",
-        "cl":"Program",
-        "me":"Print",
-        "ac":"empty"
+        "namespace":"Example",
+        "class":"Program",
+        "method":"Print",
+        "action":"empty"
     },{
-        "ns":"Example",
-        "cl":"Program",
-        "me":"Main",
-        "ac":"remove",
+        "namespace":"Example",
+        "class":"Program",
+        "method":"Main",
+        "action":"remove",
         "indices":[2,3,4,5]
     },{
-        "ns":"Example",
-        "cl":"Program",
-        "me":"Main",
-        "ac":"return",
+        "namespace":"Example",
+        "class":"Program",
+        "method":"Main",
+        "action":"return",
         "optional":"true"
     },{
-        "ns":"Example",
-        "cl":"Program",
-        "me":"Main",
-        "ac":"remove",
+        "namespace":"Example",
+        "class":"Program",
+        "method":"Main",
+        "action":"remove",
         "indices":[2,3,4,5],
         "instructions":[{
             "opcode":"ldstr",
@@ -45,10 +45,10 @@ Root attributes:
 * "targets": The targets like the Target object in [dnpatch](https://github.com/ioncodes/dnpatch#targeting-methods). It's an array.
 
 Targets' attributes:
-* "ns": The namespace
-* "cl": The class
-* "me": The method
-* "ac": The action
+* "namespace": The namespace
+* "class": The class
+* "method": The method
+* "action": The action
 * "index": The index to patch (optional)
 * "indices": The indices to patch (optional)
 * "instructions": The instructions (optional)
@@ -64,5 +64,5 @@ A script will be loaded within the constructor and if needed with LoadScript();
 ```c#
 Script script = new Script("script.json");
 script.Patch(); // apply patches
-script.Save("scriped.exe"); // save the file (only if save attribute isn't in the json)
+script.Save("scripted.exe"); // save the file (only if save attribute isn't in the json)
 ```
